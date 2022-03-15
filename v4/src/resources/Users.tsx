@@ -1,8 +1,9 @@
-import * as React from 'react';
+// Packages
+import { ReactElement } from 'react';
 import { useMediaQuery } from '@mui/material';
 import { SimpleList, List, Datagrid, EmailField, TextField } from 'react-admin';
 
-export const UserList = props => {
+export const UserList = (props): ReactElement => {
     const isSmall = useMediaQuery(theme => theme.breakpoints.down('md'));
 
     return (

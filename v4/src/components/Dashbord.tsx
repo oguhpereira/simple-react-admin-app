@@ -1,9 +1,8 @@
-import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardHeader from "@mui/material/CardHeader";
+// Packages
+import { ReactElement } from "react";
+import { Card, CardContent, CardHeader } from "@mui/material";
 
-export default () => (
+export default (): ReactElement => (
   <Card>
     <CardHeader title="Welcome to the administration" />
     <CardContent>Lorem ipsum sic dolor amet...</CardContent>

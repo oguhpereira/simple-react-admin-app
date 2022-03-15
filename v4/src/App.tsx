@@ -1,4 +1,5 @@
-import * as React from "react";
+// Packages
+import { ReactElement } from "react";
 import PostIcon from "@mui/icons-material/Book";
 import UserIcon from "@mui/icons-material/Group";
 import { Admin, Resource, ListGuesser } from "react-admin";
@@ -9,7 +10,7 @@ import { UserList } from "./resources/Users";
 import Dashboard from "./components/Dashbord";
 import authProvider from "./authProvider";
 
-const App = () => (
+const App = (): ReactElement=> (
   <Admin
     dataProvider={jsonServerProvider("https://jsonplaceholder.typicode.com")}
     authProvider={authProvider}

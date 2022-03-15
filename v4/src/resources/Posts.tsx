@@ -1,5 +1,6 @@
 
-import * as React from 'react';
+// Packages
+import { ReactElement } from 'react';
 import {
     Show,
     ShowButton,
@@ -26,7 +27,7 @@ const postFilters = [
     </ReferenceInput>,
 ];
 
-export const PostList = props => (
+export const PostList = (props): ReactElement => (
     <List {...props} filters={postFilters}>
         <Datagrid>
             <TextField source="id" />
@@ -40,11 +41,11 @@ export const PostList = props => (
     </List>
 );
 
-const PostTitle = ({ record }) => {
+const PostTitle = ({ record }): ReactElement => {
     return <span>Post {record ? `"${record.title}"` : ''}</span>;
 };
 
-export const PostEdit = () => (
+export const PostEdit = (): ReactElement => (
     <Edit title={<PostTitle />}>
         <SimpleForm>
             <TextInput disabled source="id" />
@@ -57,7 +58,7 @@ export const PostEdit = () => (
     </Edit>
 );
 
-export const PostCreate = () => (
+export const PostCreate = (): ReactElement => (
     <Create>
         <SimpleForm>
             <ReferenceInput label="User" source="userId" reference="users">
@@ -69,7 +70,7 @@ export const PostCreate = () => (
     </Create>
 );
 
-export const PostShow = props => (
+export const PostShow = (props): ReactElement => (
     <Show {...props}>
         <SimpleShowLayout>
             <TextField source="title" />
